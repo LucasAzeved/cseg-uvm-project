@@ -15,5 +15,8 @@
 -
 
 ## Coverage
--
+- Todos os items de coverage devem estar acima de 95%.
 
+### ALU
+- Branches
+  - 8/9 (último case)

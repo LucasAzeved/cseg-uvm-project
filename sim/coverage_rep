@@ -1,0 +1,113 @@
+Coverage Report Summary Data by instance
+
+=================================================================================
+=== Instance: /Processortb/dut/CU
+=== Design Unit: work.ControlUnit
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        21        21         0   100.00%
+    Conditions                      13        12         1    92.30%
+    Statements                      83        83         0   100.00%
+    Toggles                         18        18         0   100.00%
+
+=================================================================================
+=== Instance: /Processortb/dut/im
+=== Design Unit: work.InstructionMemory
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         3         3         0   100.00%
+    Statements                      22        22         0   100.00%
+    Toggles                         48        43         5    89.58%
+
+=================================================================================
+=== Instance: /Processortb/dut/R2Mux
+=== Design Unit: work.MUX2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                        108        18        90    16.66%
+
+=================================================================================
+=== Instance: /Processortb/dut/muxBeforeAlu
+=== Design Unit: work.MUX2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                         20        14         6    70.00%
+
+=================================================================================
+=== Instance: /Processortb/dut/finalMux
+=== Design Unit: work.MUX2
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                       1         1         0   100.00%
+    Toggles                         24        13        11    54.16%
+
+=================================================================================
+=== Instance: /Processortb/dut/rf
+=== Design Unit: work.RegFile
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                      12        12         0   100.00%
+    Toggles                         40        28        12    70.00%
+
+=================================================================================
+=== Instance: /Processortb/dut/alu
+=== Design Unit: work.ALU
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         9         8         1    88.88%
+    Expressions                      1         1         0   100.00%
+    Statements                       9         9         0   100.00%
+    Toggles                         30        14        16    46.66%
+
+=================================================================================
+=== Instance: /Processortb/dut/ex
+=== Design Unit: work.Extend
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       1         1         0   100.00%
+    Toggles                         24        12        12    50.00%
+
+=================================================================================
+=== Instance: /Processortb/dut/dm
+=== Design Unit: work.DataMemory
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                       3         3         0   100.00%
+    Toggles                         48         0        48     0.00%
+
+=================================================================================
+=== Instance: /Processortb/dut
+=== Design Unit: work.Processor
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                        330       161       169    48.78%
+
+=================================================================================
+=== Instance: /Processortb
+=== Design Unit: work.Processortb
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                       4         4         0   100.00%
+    Toggles                         74        15        59    20.27%
+
+
+Total Coverage By Instance (filtered view): 86.79%
+

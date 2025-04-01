@@ -1,0 +1,6 @@
+# modelsim files
+transcript
+work/
+.vscode/
+*.wlf
+*.dbg
