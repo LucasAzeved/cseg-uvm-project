@@ -196,9 +196,3 @@ module Processortb();
   end
 
 endmodule
-initial begin 
-    clk = 0;
-    forever #25 clk = ~clk;  
-    end
-
-endmodule
