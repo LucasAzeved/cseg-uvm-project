@@ -18,8 +18,8 @@ Coverage Report Summary Data by instance
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         3         3         0   100.00%
-    Statements                      22        22         0   100.00%
-    Toggles                         48        43         5    89.58%
+    Statements                      23        23         0   100.00%
+    Toggles                         44        44         0   100.00%
 
 =================================================================================
 === Instance: /Processortb/dut/R2Mux
@@ -39,7 +39,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
     Statements                       1         1         0   100.00%
-    Toggles                         20        14         6    70.00%
+    Toggles                         16        16         0   100.00%
 
 =================================================================================
 === Instance: /Processortb/dut/finalMux
@@ -49,7 +49,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
     Statements                       1         1         0   100.00%
-    Toggles                         24        13        11    54.16%
+    Toggles                         16        16         0   100.00%
 
 =================================================================================
 === Instance: /Processortb/dut/rf
@@ -59,7 +59,7 @@ Coverage Report Summary Data by instance
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
     Statements                      12        12         0   100.00%
-    Toggles                         40        28        12    70.00%
+    Toggles                         32        32         0   100.00%
 
 =================================================================================
 === Instance: /Processortb/dut/alu
@@ -70,7 +70,7 @@ Coverage Report Summary Data by instance
     Branches                         9         8         1    88.88%
     Expressions                      1         1         0   100.00%
     Statements                       9         9         0   100.00%
-    Toggles                         30        14        16    46.66%
+    Toggles                         18        18         0   100.00%
 
 =================================================================================
 === Instance: /Processortb/dut/ex
@@ -97,7 +97,7 @@ Coverage Report Summary Data by instance
 =================================================================================
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        330       161       169    48.78%
+    Toggles                        286       178       108    62.23%
 
 =================================================================================
 === Instance: /Processortb
@@ -106,8 +106,8 @@ Coverage Report Summary Data by instance
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Statements                       4         4         0   100.00%
-    Toggles                         74        15        59    20.27%
+    Toggles                         66        18        48    27.27%
 
 
-Total Coverage By Instance (filtered view): 86.79%
+Total Coverage By Instance (filtered view): 88.94%
 

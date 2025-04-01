@@ -24,7 +24,7 @@ vsim -coverage -t 10ps work.Processortb
 
 set StdArithNoWarnings 1
 
-run 2 us
+run 10 us
 
 coverage report -file coverage_rep
 coverage save coverag
