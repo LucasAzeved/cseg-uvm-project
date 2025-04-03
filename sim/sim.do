@@ -20,7 +20,7 @@ vlog -cover sbcefx ../rtl/8_Bit_Processor/TestBench/Processortb.sv
 
 vsim -coverage -t 10ps work.Processortb
 
-# do wave.do
+do wave.do
 
 set StdArithNoWarnings 1
 

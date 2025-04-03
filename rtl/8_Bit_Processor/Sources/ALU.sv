@@ -19,15 +19,37 @@ parameter	ALU_OP_ADD	= 3'b000,
 always @(*) 
 begin
 	case(aluControl)
-			ALU_OP_ADD 	: aluOut = A + B;
-			ALU_OP_SUB 	: aluOut = A - B;
-			ALU_OP_AND 	: aluOut = A & B;
-			ALU_OP_OR	: aluOut = A | B;
-			ALU_OP_EOR	: aluOut = A ^ B;
-			ALU_OP_BIC	: aluOut = A & ~B;
-			ALU_OP_RSB	: aluOut = B - A;
+			ALU_OP_ADD 	: begin
+							aluOut = A + B;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_ADD, A, B, aluOut);
+						  end
+			ALU_OP_SUB 	: begin
+						  	aluOut = A - B;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_SUB, A, B, aluOut);
+						  end
+			ALU_OP_AND 	: begin
+						  	aluOut = A & B;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_AND, A, B, aluOut);
+					      end
+			ALU_OP_OR	: begin
+							aluOut = A | B;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_OR, A, B, aluOut);
+						  end
+			ALU_OP_EOR	: begin
+						  	aluOut = A ^ B;
+						    $display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_EOR, A, B, aluOut);
+						  end
+			ALU_OP_BIC	: begin
+							aluOut = A & ~B;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_BIC, A, B, aluOut);
+						  end
+			ALU_OP_RSB	: begin
+							aluOut = B - A;
+					      	$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_RSB, A, B, aluOut);
+						  end
 			ALU_OP_BEQ	: begin
-							 equality = (A==B)?1'b1:1'b0; 
+							equality = (A==B)?1'b1:1'b0; 
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_BEQ, A, B, aluOut);
 						  end
 	endcase
 end
