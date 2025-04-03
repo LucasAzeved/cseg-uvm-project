@@ -24,7 +24,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b010) 
+		if (func == 3'b001) 
 		begin
 		AluControl		<= 3'b001;
 		AluSrc		    <= 1'b0;
@@ -34,7 +34,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b100) 
+		if (func == 3'b010) 
 		begin
 		AluControl		<= 3'b010;
 		AluSrc		    <= 1'b0;
@@ -44,7 +44,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b101) 
+		if (func == 3'b011) 
 		begin
 		AluControl		<= 3'b011;
 		AluSrc		    <= 1'b0;
@@ -54,7 +54,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b001) 
+		if (func == 3'b100) 
 		begin
 		AluControl		<= 3'b100;
 		AluSrc		    <= 1'b0;
@@ -64,7 +64,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b011) 
+		if (func == 3'b101) 
 		begin
 		AluControl		<= 3'b101;
 		AluSrc		    <= 1'b0;
@@ -74,7 +74,7 @@ begin
 		jump			<= 1'b0;
 		r2Chooser       <= 1'b0;
 		end
-		if (func == 3'b111) 
+		if (func == 3'b110) 
 		begin
 		AluControl		<= 3'b110;
 		AluSrc		    <= 1'b0;

@@ -21,15 +21,16 @@ initial instruction_memory[4] = 16'b0000_101_011_100_100;   // Type R | Rd = r00
 initial instruction_memory[5] = 16'b0000_111_101_110_101;   // Type R | Rd = r001 - r000 | BIC
 initial instruction_memory[6] = 16'b0000_010_001_000_110;   // Type R | Rd = r001 - r000 | RSB
 initial instruction_memory[7] = 16'b0000_111_101_111_111;   // Type R | Rd = r001 - r000 | BEQ
-initial instruction_memory[8] = 16'b0100_111_111_001111;    // Type I | Rd = r001 - r000 | ADDI
-initial instruction_memory[9] = 16'b1111_111_010_001000;    // Type I | Rd = r001 - r000 | SW
-initial instruction_memory[10] = 16'b1011_111_011_001001;   // Type I | Rd = r001 - r000 | LW
-initial instruction_memory[11] = 16'b0100_000_010_001000;   // Type I | Rd = r001 - r000 | ADDI
-initial instruction_memory[12] = 16'b0100_001_010_001000;   // Type I | Rd = r001 - r000 | ADDI
-initial instruction_memory[13] = 16'b1000_000_001_000110;   // Type I | Rd = r001 - r000 | BEQ
-initial instruction_memory[18] = 16'b0000_010_001_000_000;  // Type R | Rd = r001 - r000 | ADD
-initial instruction_memory[19] = 16'b0010_0011_00000011;    // Type J | Rd = r001 - r000 | JUMP
-initial instruction_memory[22] = 16'b0100_001_001_010011;   // Type I | Rd = r001 - r000 | ADDI
+initial instruction_memory[8] = 16'b0000_111_111_111_111;   // Type R | Rd = r001 - r000 | BEQ
+initial instruction_memory[9] = 16'b0100_111_111_001111;    // Type I | Rd = r001 - r000 | ADDI
+initial instruction_memory[10] = 16'b1111_111_010_001000;   // Type I | Rd = r001 - r000 | SW
+initial instruction_memory[11] = 16'b1011_111_011_001001;   // Type I | Rd = r001 - r000 | LW
+initial instruction_memory[12] = 16'b0100_000_010_001000;   // Type I | Rd = r001 - r000 | ADDI
+initial instruction_memory[13] = 16'b0100_001_010_001000;   // Type I | Rd = r001 - r000 | ADDI
+initial instruction_memory[14] = 16'b1000_000_001_000110;   // Type I | Rd = r001 - r000 | BEQ
+initial instruction_memory[19] = 16'b0000_010_001_000_000;  // Type R | Rd = r001 - r000 | ADD
+initial instruction_memory[20] = 16'b0010_0011_00000011;    // Type J | Rd = r001 - r000 | JUMP
+initial instruction_memory[23] = 16'b0100_001_001_010011;   // Type I | Rd = r001 - r000 | ADDI
 
 initial PC = 5'b00; 
 
@@ -39,6 +40,7 @@ always @(posedge clk)
 begin
     if(jump != 1'b0)
         PC <= PC + out[7:0];
+        // PC <= PC + 1;
     else if (equality == 1'b1)
         PC <= PC + extendedIm;
     else 
