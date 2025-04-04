@@ -5,7 +5,8 @@ module DataMemory(
     input [7:0] WD,
     output reg [7:0] out,
     input mem_write,
-    input clk
+    input clk,
+    input reset
     );
 
 reg [7:0] register [255:0];
