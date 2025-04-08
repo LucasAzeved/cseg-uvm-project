@@ -48,9 +48,14 @@ begin
 					      	$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_RSB, A, B, aluOut);
 						  end
 			ALU_OP_BEQ	: begin
-							equality = (A==B)?1'b1:1'b0; 
-							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_BEQ, A, B, aluOut);
+							equality = (A==B)?1'b1:1'b0;
+							$display("OP: %d | A: %d | B: %d | OUT: %d", ALU_OP_BEQ, A, B, equality);
 						  end
+			//default: begin
+			//	aluOut = 8'b0;  // Default value when aluControl is not recognized
+			//	equality = 1'b0; // Default value for equality output
+			//	$display("ERROR: Unknown ALU operation. aluControl: %b", aluControl);
+			//end
 	endcase
 end
 endmodule
