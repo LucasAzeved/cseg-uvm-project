@@ -293,6 +293,7 @@ Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         3         3         0   100.00%
+<<<<<<< HEAD
 
 ================================Branch Details================================
 
@@ -346,6 +347,9 @@ Statement Coverage for instance /Processortb/dut/im --
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
+=======
+    Statements                      24        24         0   100.00%
+>>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
     Toggles                         44        44         0   100.00%
 
 ================================Toggle Details================================
@@ -675,6 +679,7 @@ Expression Coverage:
     Enabled Coverage              Bins   Covered    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Expressions                      1         1         0   100.00%
+<<<<<<< HEAD
 
 ================================Expression Details================================
 
@@ -718,6 +723,9 @@ Statement Coverage for instance /Processortb/dut/alu --
 Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
+=======
+    Statements                      17        17         0   100.00%
+>>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
     Toggles                         18        18         0   100.00%
 
 ================================Toggle Details================================
