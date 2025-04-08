@@ -25,11 +25,6 @@ module dataMemory_prop(
     mem_write, 
     clk,
     reset,
-
-  //internals
-  //count, //<<-- number of coins in
-  //ea,    //<<-- previous state
-  //pe     //<<-- next state
   register
 );
 
@@ -42,11 +37,9 @@ endfunction
 input A, WD, mem_write,clk,reset;
 
 //module outputs (:out)
-//output d100, green, atum, bacon, busy;
 input out;
 
 //internal signals
-//input logic [0:2] count;
 input reg [7:0] register [255:0];
 
 default clocking @(posedge clk); endclocking //defaults all assertions to posedge
@@ -57,10 +50,10 @@ default clocking @(posedge clk); endclocking //defaults all assertions to posedg
 //states.
 
 property mem_write_prop;
-	@(posedge clk) (mem_write)|-> 
-		(register[A] == WD);
+	@(posedge clk) (mem_write)|-> ##1 
+		(register[A] == $past(WD));
 endproperty
-a_mem_write_prop : assume property (mem_write_prop);
+a_mem_write_prop : assert property (mem_write_prop);
 
 
 /*

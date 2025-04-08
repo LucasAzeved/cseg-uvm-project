@@ -7,13 +7,10 @@ module dataMemory_bind_top;
 	  .out(out),      .mem_write(mem_write),
 	  .clk(clk),
       .reset(reset),
-	  //outs >> d100, green, atum, bacon, busy;
+	 
 
 	  //internals
       .register(register)
-	  //.count(count),
-	  //.pe(pe),
-	  //.ea(ea)
 	);
 
 endmodule

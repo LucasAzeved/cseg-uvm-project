@@ -16,7 +16,7 @@ elaborate -top {DataMemory}
 
 # Set up Clocks and Resets
 clock clk -factor 1 -phase 1
-reset -expression {reset = '1'};
+reset -expression {reset == 1'b1}
 
 # get designs statistics
 get_design_info
