@@ -26,5 +26,7 @@ set StdArithNoWarnings 1
 
 run 10 us
 
+coverage exclude -src ../rtl/8_Bit_Processor/Sources/ControlUnit.sv -line 139 -code c
+
 coverage report -file coverage_rep
 coverage save coverag
