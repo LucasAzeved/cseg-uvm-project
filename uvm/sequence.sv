@@ -1,20 +1,19 @@
-class my_sequence extends uvm_sequence #(my_transaction);
-`uvm_object_utils(my_sequence)
+class our_sequence extends uvm_sequence;
+    `uvm_object_utils(our_sequence)
+    
+    our_packet pkt;
 
-function new(string name = "");
-  super.new(name);
-endfunction: new
+    function new(string name = "our_sequence");
+        super.new(name);
+    endfunction
 
-task body;
-  forever
-  begin
-    my_transaction tx;
-    tx = my_transaction::type_id::create("tx");
-    start_item(tx);
-    assert(tx.randomize());
-    finish_item(tx);
-  end
-endtask: body
-
-endclass: my_sequence
-
+    task body();
+        pkt = our_packet::type_id::create("Our Packet");
+        
+        repeat(10) begin
+            start_item(pkt);
+            pkt.randomize();
+            finish_item(pkt);
+        end
+    endtask
+endclass

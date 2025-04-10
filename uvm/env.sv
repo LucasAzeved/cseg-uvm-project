@@ -1,14 +1,22 @@
 class our_env extends uvm_env;
 
-  `uvm_component_utils(our_env)
+    `uvm_component_utils(our_env)
 
-  function new (string name = "our_env", uvm_component parent = null);
-    super.new(name, parent);
-  
-  endfunction: new
+    // instantiate classes
+    our_agent agnt;
 
-endclass: our_env
+    function new(string name = "our_env", uvm_component parent = null);
+        super.new(name, parent);
+    endfunction
 
+    // build phase
+    function void build_phase(uvm_phase phase);
+        `uvm_info(get_type_name(), "In the build phase", UVM_MEDIUM);
+        
+        agnt = our_agent::type_id::create("agnt", this); // create agent
+    endfunction
+
+endclass
 
 /*
 class my_env extends uvm_env;
