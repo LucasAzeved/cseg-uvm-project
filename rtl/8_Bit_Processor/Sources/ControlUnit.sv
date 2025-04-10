@@ -26,39 +26,6 @@ begin
 		r2Chooser       <= 1'b0;
 		end
 		if (func == 3'b001) 
-<<<<<<< HEAD
-=======
-		begin
-		AluControl		<= 3'b001;
-		AluSrc		    <= 1'b0;
-		MemtoReg 	    <= 1'b0;
-		RegWrite	    <= 1'b1;
-		MemWrite	    <= 1'b0;
-		jump			<= 1'b0;
-		r2Chooser       <= 1'b0;
-		end
-		if (func == 3'b010) 
-		begin
-		AluControl		<= 3'b010;
-		AluSrc		    <= 1'b0;
-		MemtoReg 	    <= 1'b0;
-		RegWrite	    <= 1'b1;
-		MemWrite	    <= 1'b0;
-		jump			<= 1'b0;
-		r2Chooser       <= 1'b0;
-		end
-		if (func == 3'b011) 
-		begin
-		AluControl		<= 3'b011;
-		AluSrc		    <= 1'b0;
-		MemtoReg 	    <= 1'b0;
-		RegWrite	    <= 1'b1;
-		MemWrite	    <= 1'b0;
-		jump			<= 1'b0;
-		r2Chooser       <= 1'b0;
-		end
-		if (func == 3'b100) 
->>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
 		begin
 		$display("foi: 2");
 		AluControl		<= 3'b001;
