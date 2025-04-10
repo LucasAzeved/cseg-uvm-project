@@ -16,7 +16,7 @@ reg [15:0] instruction_memory [31:0];
 initial instruction_memory[0] = 16'b0000_010_001_000_000;   // Type R | Rd = r001 - r000 | ADD
 initial instruction_memory[1] = 16'b0000_010_001_000_001;   // Type R | Rd = r001 - r000 | SUB
 initial instruction_memory[2] = 16'b0000_011_010_000_010;   // Type R | Rd = r001 - r000 | AND
-initial instruction_memory[3] = 16'b0000_011_010_000_011;   // Type R | Rd = r001 - r000 | OR
+initial instruction_memory[3] = 16'b0000_010_010_000_011;   // Type R | Rd = r001 - r000 | OR
 initial instruction_memory[4] = 16'b0000_101_011_100_100;   // Type R | Rd = r001 - r000 | EOR
 initial instruction_memory[5] = 16'b0000_111_101_110_101;   // Type R | Rd = r001 - r000 | BIC
 initial instruction_memory[6] = 16'b0000_010_001_000_110;   // Type R | Rd = r001 - r000 | RSB
@@ -31,6 +31,7 @@ initial instruction_memory[14] = 16'b1000_000_001_000110;   // Type I | Rd = r00
 initial instruction_memory[19] = 16'b0000_010_001_000_000;  // Type R | Rd = r001 - r000 | ADD
 initial instruction_memory[20] = 16'b0010_0011_00000011;    // Type J | Rd = r001 - r000 | JUMP
 initial instruction_memory[23] = 16'b0100_001_001_010011;   // Type I | Rd = r001 - r000 | ADDI
+initial instruction_memory[26] = 16'b0000_011_010_010_011;  // Type R | Rd = r001 - r000 | OR
 
 initial PC = 5'b00; 
 
