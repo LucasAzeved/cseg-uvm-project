@@ -20,8 +20,13 @@ initial instruction_memory[3] = 16'b0000_011_010_000_011;   // Type R | Rd = r00
 initial instruction_memory[4] = 16'b0000_101_011_100_100;   // Type R | Rd = r001 - r000 | EOR
 initial instruction_memory[5] = 16'b0000_111_101_110_101;   // Type R | Rd = r001 - r000 | BIC
 initial instruction_memory[6] = 16'b0000_010_001_000_110;   // Type R | Rd = r001 - r000 | RSB
+<<<<<<< HEAD
+// initial instruction_memory[7] = 16'b0000_111_101_111_111;   // Type R | Rd = r001 - r000 | BEQ
+// initial instruction_memory[8] = 16'b0000_111_111_111_111;   // Type R | Rd = r001 - r000 | BEQ
+=======
 initial instruction_memory[7] = 16'b0000_111_101_111_111;   // Type R | Rd = r001 - r000 | BEQ
 initial instruction_memory[8] = 16'b0000_111_111_111_111;   // Type R | Rd = r001 - r000 | BEQ
+>>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
 initial instruction_memory[9] = 16'b0100_111_111_001111;    // Type I | Rd = r001 - r000 | ADDI
 initial instruction_memory[10] = 16'b1111_111_010_001000;   // Type I | Rd = r001 - r000 | SW
 initial instruction_memory[11] = 16'b1011_111_011_001001;   // Type I | Rd = r001 - r000 | LW

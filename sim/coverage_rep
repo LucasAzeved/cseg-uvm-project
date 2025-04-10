@@ -1,113 +1,957 @@
-Coverage Report Summary Data by instance
+Coverage Report by instance with details
 
 =================================================================================
 === Instance: /Processortb/dut/CU
 === Design Unit: work.ControlUnit
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                        21        21         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/CU
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/ControlUnit.sv
+------------------------------------IF Branch------------------------------------
+    15                                        64     Count coming in to IF
+    15              1                         28     
+    95              1                         12     
+    106             1                          4     
+    117             1                          4     
+    128             1                          4     
+    139             1                          4     
+    149             1                          8     
+Branch totals: 7 hits of 7 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    17                                        28     Count coming in to IF
+    17              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    28                                        28     Count coming in to IF
+    28              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    39                                        28     Count coming in to IF
+    39              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    50                                        28     Count coming in to IF
+    50              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    61                                        28     Count coming in to IF
+    61              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    72                                        28     Count coming in to IF
+    72              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+------------------------------------IF Branch------------------------------------
+    83                                        28     Count coming in to IF
+    83              1                          4     
+                                              24     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Condition Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Conditions                      13        12         1    92.30%
-    Statements                      83        83         0   100.00%
+
+================================Condition Details================================
+
+Condition Coverage for instance /Processortb/dut/CU --
+
+  File ../rtl/8_Bit_Processor/Sources/ControlUnit.sv
+----------------Focused Condition View-------------------
+Line       15 Item    1  (opcode == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       17 Item    1  (func == 0)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       28 Item    1  (func == 1)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       39 Item    1  (func == 2)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       50 Item    1  (func == 3)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       61 Item    1  (func == 4)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       72 Item    1  (func == 5)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       83 Item    1  (func == 6)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       95 Item    1  (opcode == 4)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       106 Item    1  (opcode == 11)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       117 Item    1  (opcode == 15)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       128 Item    1  (opcode == 8)
+Condition totals: 1 of 1 input term covered = 100.00%
+
+----------------Focused Condition View-------------------
+Line       139 Item    1  (opcode == 2)
+Condition totals: 0 of 1 input term covered = 0.00%
+
+     Input Term   Covered  Reason for no coverage   Hint
+    -----------  --------  -----------------------  --------------
+  (opcode == 2)         N  '_0' not hit             Hit '_0'
+
+     Rows:       Hits  FEC Target            Non-masking condition(s)      
+ ---------  ---------  --------------------  -------------------------     
+  Row   1:    ***0***  (opcode == 2)_0       -                             
+  Row   2:          1  (opcode == 2)_1       -                             
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                     103       103         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/CU --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/ControlUnit.sv
+    13              1                         64     
+    19              1                          4     
+    20              1                          4     
+    21              1                          4     
+    22              1                          4     
+    23              1                          4     
+    24              1                          4     
+    25              1                          4     
+    26              1                          4     
+    30              1                          4     
+    31              1                          4     
+    32              1                          4     
+    33              1                          4     
+    34              1                          4     
+    35              1                          4     
+    36              1                          4     
+    37              1                          4     
+    41              1                          4     
+    42              1                          4     
+    43              1                          4     
+    44              1                          4     
+    45              1                          4     
+    46              1                          4     
+    47              1                          4     
+    48              1                          4     
+    52              1                          4     
+    53              1                          4     
+    54              1                          4     
+    55              1                          4     
+    56              1                          4     
+    57              1                          4     
+    58              1                          4     
+    59              1                          4     
+    63              1                          4     
+    64              1                          4     
+    65              1                          4     
+    66              1                          4     
+    67              1                          4     
+    68              1                          4     
+    69              1                          4     
+    70              1                          4     
+    74              1                          4     
+    75              1                          4     
+    76              1                          4     
+    77              1                          4     
+    78              1                          4     
+    79              1                          4     
+    80              1                          4     
+    81              1                          4     
+    85              1                          4     
+    86              1                          4     
+    87              1                          4     
+    88              1                          4     
+    89              1                          4     
+    90              1                          4     
+    91              1                          4     
+    92              1                          4     
+    97              1                         12     
+    98              1                         12     
+    99              1                         12     
+    100             1                         12     
+    101             1                         12     
+    102             1                         12     
+    103             1                         12     
+    104             1                         12     
+    108             1                          4     
+    109             1                          4     
+    110             1                          4     
+    111             1                          4     
+    112             1                          4     
+    113             1                          4     
+    114             1                          4     
+    115             1                          4     
+    119             1                          4     
+    120             1                          4     
+    121             1                          4     
+    122             1                          4     
+    123             1                          4     
+    124             1                          4     
+    125             1                          4     
+    126             1                          4     
+    130             1                          4     
+    131             1                          4     
+    132             1                          4     
+    133             1                          4     
+    134             1                          4     
+    135             1                          4     
+    136             1                          4     
+    137             1                          4     
+    141             1                          4     
+    142             1                          4     
+    143             1                          4     
+    144             1                          4     
+    145             1                          4     
+    146             1                          4     
+    147             1                          4     
+    151             1                          8     
+    152             1                          8     
+    153             1                          8     
+    154             1                          8     
+    155             1                          8     
+    156             1                          8     
+    157             1                          8     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         18        18         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/CU --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          9 
+Toggled Node Count   =          9 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (18 of 18 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/im
 === Design Unit: work.InstructionMemory
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         3         3         0   100.00%
+<<<<<<< HEAD
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/im
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/InstructionMemory.sv
+------------------------------------IF Branch------------------------------------
+    41                                       200     Count coming in to IF
+    41              1                          4     
+    44              1                          4     
+    46              1                        192     
+Branch totals: 3 hits of 3 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Statements                      22        22         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/im --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/InstructionMemory.sv
+    16              1                          1     
+    17              1                          1     
+    18              1                          1     
+    19              1                          1     
+    20              1                          1     
+    21              1                          1     
+    22              1                          1     
+    25              1                          1     
+    26              1                          1     
+    27              1                          1     
+    28              1                          1     
+    29              1                          1     
+    30              1                          1     
+    31              1                          1     
+    32              1                          1     
+    33              1                          1     
+    35              1                          1     
+    37              1                        201     
+    39              1                        200     
+    42              1                          4     
+    45              1                          4     
+    47              1                        192     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+=======
     Statements                      24        24         0   100.00%
+>>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
     Toggles                         44        44         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/im --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         22 
+Toggled Node Count   =         22 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (44 of 44 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/R2Mux
 === Design Unit: work.MUX2
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/R2Mux
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+------------------------------------IF Branch------------------------------------
+    7                                         68     Count coming in to IF
+    7               1                         12     
+    7               2                         56     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/R2Mux --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+    7               1                         71     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                        108        18        90    16.66%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/R2Mux --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                           d0[3-7]           0           0           0           0           0           0           3        0.00 
+                                           d1[3-7]           0           0           0           0           0           0           3        0.00 
+                                            y[3-7]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         24 
+Toggled Node Count   =          9 
+Untoggled Node Count =         15 
+
+Toggle Coverage      =      16.66% (18 of 108 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/muxBeforeAlu
 === Design Unit: work.MUX2
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/muxBeforeAlu
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+------------------------------------IF Branch------------------------------------
+    7                                        124     Count coming in to IF
+    7               1                         52     
+    7               2                         72     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/muxBeforeAlu --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+    7               1                        127     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         16        16         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/muxBeforeAlu --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          8 
+Toggled Node Count   =          8 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (16 of 16 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/finalMux
 === Design Unit: work.MUX2
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/finalMux
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+------------------------------------IF Branch------------------------------------
+    7                                        108     Count coming in to IF
+    7               1                         12     
+    7               2                         96     
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/finalMux --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/MUX2.sv
+    7               1                        109     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         16        16         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/finalMux --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          8 
+Toggled Node Count   =          8 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (16 of 16 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/rf
 === Design Unit: work.RegFile
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/rf
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/RegFile.sv
+------------------------------------IF Branch------------------------------------
+    28                                        64     Count coming in to IF
+    28              1                         48     
+                                              16     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                      12        12         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/rf --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/RegFile.sv
+    12              1                        115     
+    13              1                        100     
+    17              1                          1     
+    18              1                          1     
+    19              1                          1     
+    20              1                          1     
+    21              1                          1     
+    22              1                          1     
+    23              1                          1     
+    24              1                          1     
+    26              1                         64     
+    29              1                         48     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         32        32         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/rf --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         16 
+Toggled Node Count   =         16 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (32 of 32 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/alu
 === Design Unit: work.ALU
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         9         8         1    88.88%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/alu
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/ALU.sv
+------------------------------------CASE Branch------------------------------------
+    21                                       104     Count coming in to CASE
+    22              1                         44     
+    26              1                          8     
+    30              1                          4     
+    34              1                          8     
+    38              1                          8     
+    42              1                          8     
+    46              1                          8     
+    50              1                         16     
+                                         ***0***     All False Count
+Branch totals: 8 hits of 9 branches = 88.88%
+
+
+Expression Coverage:
+    Enabled Coverage              Bins   Covered    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Expressions                      1         1         0   100.00%
+<<<<<<< HEAD
+
+================================Expression Details================================
+
+Expression Coverage for instance /Processortb/dut/alu --
+
+  File ../rtl/8_Bit_Processor/Sources/ALU.sv
+----------------Focused Expression View-----------------
+Line       51 Item    1  (A == B)
+Expression totals: 1 of 1 input term covered = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                      17        17         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/alu --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/ALU.sv
+    19              1                        104     
+    23              1                         44     
+    24              1                         44     
+    27              1                          8     
+    28              1                          8     
+    31              1                          4     
+    32              1                          4     
+    35              1                          8     
+    36              1                          8     
+    39              1                          8     
+    40              1                          8     
+    43              1                          8     
+    44              1                          8     
+    47              1                          8     
+    48              1                          8     
+    51              1                         16     
+    52              1                         16     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+=======
+    Statements                      17        17         0   100.00%
+>>>>>>> 4d40f576024ded7b75a9a8905cb798f7fa41b0c6
     Toggles                         18        18         0   100.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/alu --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          9 
+Toggled Node Count   =          9 
+Untoggled Node Count =          0 
+
+Toggle Coverage      =     100.00% (18 of 18 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/ex
 === Design Unit: work.Extend
 =================================================================================
+Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Statements                       1         1         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/ex --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/Extend.sv
+    7               1                         69     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         24        12        12    50.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/ex --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                          out[6-7]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          8 
+Toggled Node Count   =          6 
+Untoggled Node Count =          2 
+
+Toggle Coverage      =      50.00% (12 of 24 bins)
 
 =================================================================================
 === Instance: /Processortb/dut/dm
 === Design Unit: work.DataMemory
 =================================================================================
+Branch Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Branches                         2         2         0   100.00%
+
+================================Branch Details================================
+
+Branch Coverage for instance /Processortb/dut/dm
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/DataMemory.sv
+------------------------------------IF Branch------------------------------------
+    15                                         9     Count coming in to IF
+    15              1                          4     
+                                               5     All False Count
+Branch totals: 2 hits of 2 branches = 100.00%
+
+
+Statement Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Statements                       3         3         0   100.00%
-    Toggles                         48         0        48     0.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb/dut/dm --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/Sources/DataMemory.sv
+    12              1                         84     
+    13              1                          9     
+    15              1                          4     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         40         6        34    15.00%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut/dm --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                          out[0-3]           0           0           0           0           0           0           3        0.00 
+                                            out[4]           1           0           0           0           0           0           3       16.66 
+                                            out[7]           0           1           0           0           0           0           3       16.66 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =          8 
+Toggled Node Count   =          2 
+Untoggled Node Count =          6 
+
+Toggle Coverage      =      15.00% (6 of 40 bins)
 
 =================================================================================
 === Instance: /Processortb/dut
 === Design Unit: work.Processor
 =================================================================================
+Toggle Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
-    Toggles                        286       178       108    62.23%
+    Toggles                        278       184        94    66.18%
+
+================================Toggle Details================================
+
+Toggle Coverage for instance /Processortb/dut --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                   dataMemOut[0-3]           0           0           0           0           0           0           3        0.00 
+                                     dataMemOut[4]           1           0           0           0           0           0           3       16.66 
+                                     dataMemOut[7]           0           1           0           0           0           0           3       16.66 
+                                    extendOut[6-7]           0           0           0           0           0           0           3        0.00 
+                                         out[8-15]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =        107 
+Toggled Node Count   =         91 
+Untoggled Node Count =         16 
+
+Toggle Coverage      =      66.18% (184 of 278 bins)
 
 =================================================================================
 === Instance: /Processortb
 === Design Unit: work.Processortb
 =================================================================================
+Statement Coverage:
     Enabled Coverage              Bins      Hits    Misses  Coverage
     ----------------              ----      ----    ------  --------
     Statements                       4         4         0   100.00%
+
+================================Statement Details================================
+
+Statement Coverage for instance /Processortb --
+
+    Line         Item                      Count     Source 
+    ----         ----                      -----     ------ 
+  File ../rtl/8_Bit_Processor/TestBench/Processortb.sv
+    9               1                          1     
+    10              1                          1     
+    10              2                        401     
+    10              3                        400     
+Toggle Coverage:
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
     Toggles                         66        18        48    27.27%
 
+================================Toggle Details================================
 
-Total Coverage By Instance (filtered view): 88.94%
+Toggle Coverage for instance /Processortb --
+
+                                              Node      1H->0L      0L->1H       0L->Z       Z->0L       1H->Z       Z->H1     ExtMode  "Coverage"
+                                              ---------------------------------------------------------------------------------------------------
+                                         out[8-15]           0           0           0           0           0           0           3        0.00 
+
+========
+(n*) - Number was not used in coverage calculations performed by extended toggle algorithms.
+
+Extended Toggle Coverage Calculation Criteria:
+-----------------------------------------------
+	ExtMode 1: 0L->1H & 1H->0L & any one 'Z' transition (to/from 'Z').
+	ExtMode 2: 0L->1H & 1H->0L & one transition to 'Z' & one transition from 'Z'.
+	ExtMode 3: 0L->1H & 1H->0L & all 'Z' transitions.
+========
+
+Total Node Count     =         17 
+Toggled Node Count   =          9 
+Untoggled Node Count =          8 
+
+Toggle Coverage      =      27.27% (18 of 66 bins)
+
+
+Total Coverage By Instance (filtered view): 89.57%
 

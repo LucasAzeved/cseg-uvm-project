@@ -1,59 +1,32 @@
 // fpv.sv
 
-//sandwiches macroses
-`define GREEN_PRICE 2
-`define ATUM_PRICE  3
-`define BACON_PRICE 4
-
-//TODO: find corresponded 'length for system verilog
-//optionally 2**5
-//optionally "11111"
-//optionally 21
-`define MAX_COUNT 3'h7
-`define FSM_TRANSITION_DELAY ##[0:2]
-
-//enumeration for the state machine
-
-
 //module interface (entity)
-module dataMemory_prop(
-    
-  //interface
-    A,
-    WD,
-    out,
-    mem_write, 
-    clk,
-    reset,
-  register
+module dataMemory_prop (
+  input  logic clk,         
+  input  logic reset,
+  input  logic [7:0] A,   // addr_in
+  input  logic [7:0] WD,  // data_in
+  input  logic [7:0] out, // data_out
+  input  logic mem_write, // wb-byte
+
+  // internals
+  input  logic [7:0] register [255:0] // memory cells
 );
 
-//return true iff the given signal is the only risen among the available input
-/*function int onehot_i (input logic i);
-	onehot_i = ($onehot({r_green, r_atum, r_bacon, dev, m100}) && i);
-endfunction
-*/
-//module inputs (:in)
-input A, WD, mem_write,clk,reset;
-
-//module outputs (:out)
-input out;
-
-//internal signals
-input reg [7:0] register [255:0];
-
 default clocking @(posedge clk); endclocking //defaults all assertions to posedge
-//default disable iff reset; //disable everything when reset is risen
 
-//We assume that if device is busy, there can be no input. The device is busy
-//when not at the action state. Thus, all input signals are lowered for these
-//states.
-
+/**
+ * Prop: mem_read_prop
+ * Checks whether the output occurs in the next cycles
+ *   when mem_write is low.
+ * Reads: "Whenever mem_write is low, out must be equals
+     to the value stored at the A index from the past cycle"
+ */
 property mem_write_prop;
-	@(posedge clk) (mem_write)|-> ##1 
-		(register[A] == $past(WD));
+	@(posedge clk) disable iff (reset)
+    mem_write |-> ##1 register[$past(A)] == $past(WD);
 endproperty
-a_mem_write_prop : assert property (mem_write_prop);
+mem_write_assertion : assert property (mem_write_prop);
 
 
 /*
