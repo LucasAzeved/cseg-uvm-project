@@ -1,0 +1,52 @@
+class our_env extends uvm_env;
+
+    `uvm_component_utils(our_env)
+
+    // instantiate classes
+    our_agent agnt;
+
+    function new(string name = "our_env", uvm_component parent = null);
+        super.new(name, parent);
+    endfunction
+
+    // build phase
+    function void build_phase(uvm_phase phase);
+        `uvm_info(get_type_name(), "In the build phase", UVM_MEDIUM);
+        
+        agnt = our_agent::type_id::create("agnt", this); // create agent
+    endfunction
+
+endclass
+
+/*
+class my_env extends uvm_env;
+`uvm_component_utils(my_env);
+
+ my_agent           my_agent_h;
+ my_subscriber      my_subscriber_h;
+ my_param_container my_param_h;
+ 
+function new(string name, uvm_component parent);
+  super.new(name,parent);
+endfunction: new
+
+
+function void build_phase(uvm_phase phase);
+  `uvm_info("msg", "Building ENV", UVM_NONE)
+
+  my_param_h = my_param_container::type_id::create("my_param");
+  uvm_config_db#(my_param_container)::set(null, "*", "my_param", my_param_h);
+
+  my_agent_h = my_agent::type_id::create("my_agent", this);
+  my_subscriber_h = my_subscriber::type_id::create("my_subscriber", this);
+  `uvm_info("msg", "ENV Done !", UVM_NONE)
+endfunction: build_phase
+
+function void connect_phase(uvm_phase phase);
+  `uvm_info("msg", "Connecting ENV", UVM_NONE)
+  my_agent_h.aport.connect(my_subscriber_h.analysis_export);
+  `uvm_info("msg", "Connecting ENV Done !", UVM_NONE)
+endfunction: connect_phase
+
+endclass: my_env
+*/
