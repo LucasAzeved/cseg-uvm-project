@@ -15,13 +15,6 @@ module dataMemory_prop (
 
 default clocking @(posedge clk); endclocking //defaults all assertions to posedge
 
-/**
- * Prop: mem_read_prop
- * Checks whether the output occurs in the next cycles
- *   when mem_write is low.
- * Reads: "Whenever mem_write is low, out must be equals
-     to the value stored at the A index from the past cycle"
- */
 property mem_write_prop;
 	@(posedge clk) disable iff (reset)
     mem_write |-> ##1 register[$past(A)] == $past(WD);

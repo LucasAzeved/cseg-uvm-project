@@ -1,11 +1,12 @@
 `timescale 1ns / 1ps
 
-module RegFile(A1, A2, A3, WD3, RD1, RD2, WE3, clk);
+module RegFile(A1, A2, A3, WD3, RD1, RD2, WE3, clk, reset);
     input [2:0] A1, A2, A3;
     input [7:0] WD3;
     output [7:0] RD1, RD2;
     input WE3;
     input clk;
+    input reset;
 
   reg [7:0] registers [7:0];
 

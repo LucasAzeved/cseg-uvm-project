@@ -2,15 +2,15 @@
 
 clear -all
 
-analyze -sv ../rtl/8_Bit_Processor/Sources/DataMemory.sv ;
+analyze -sv ../rtl/8_Bit_Processor/Sources/RegFile.sv ;
 
 # Analyze property files
-analyze -sva bindings.sv fpv.sv ;
+analyze -sva RegFile/bindings.sv RegFile/fpv.sv ;
 
 #set_evaluate_properties_on_formal_reset off
 
 # elaborate the design, point to the design top level
-elaborate -top {DataMemory}
+elaborate -top {RegFile}
 
 # Set up Clocks and Resets
 clock clk -factor 1 -phase 1
