@@ -1,28 +1,58 @@
-class our_agent extends uvm_agent;
+import uvm_pkg::*;
+`include "uvm_macros.svh"
+`include "driver.sv"
+`include "monitor.sv"
 
-    `uvm_component_utils(our_agent)
+class agent extends uvm_agent;
+    `uvm_component_utils(agent)
+    driver drv;
+    monitor mon;
+    uvm_sequencer #(regfile_transaction) sqr;
 
-    our_sequencer seqr;
-    our_driver    drv;
-    our_monitor   mon;
-
-    function new(string name = "our_agent", uvm_component parent = null);
+    function new(string name = "agent", uvm_component parent = null);
         super.new(name, parent);
-    endfunction
+    endfunction: new
 
-    // build phase
-    function void build_phase(uvm_phase phase);
-        seqr = our_sequencer::type_id::create("seqr", this);
-        drv = our_driver::type_id::create("drv", this);
-        mon = our_monitor::type_id::create("mon", this);
-    endfunction
+    virtual function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        drv = driver::type_id::create("drv", this);
+        mon = monitor::type_id::create("mon", this);
+        sqr = uvm_sequencer#(regfile_transaction)::type_id::create("sqr", this);
+    endfunction: build_phase
 
-    // connect phase
-    function void connect_phase(uvm_phase phase);
-        // necessary connections
-        drv.seq_item_port.connect(seqr.seq_item_export);
-    endfunction
+    virtual function void connect_phase(uvm_phase phase);
+        super.connect_phase(phase);
+        drv.seq_item_port.connect(sqr.seq_item_export);
+    endfunction: connect_phase
+    
 endclass
+
+
+// class our_agent extends uvm_agent;
+
+//     `uvm_component_utils(our_agent)
+
+//     our_sequencer seqr;
+//     our_driver    drv;
+//     our_monitor   mon;
+
+//     function new(string name = "our_agent", uvm_component parent = null);
+//         super.new(name, parent);
+//     endfunction
+
+//     // build phase
+//     function void build_phase(uvm_phase phase);
+//         seqr = our_sequencer::type_id::create("seqr", this);
+//         drv = our_driver::type_id::create("drv", this);
+//         mon = our_monitor::type_id::create("mon", this);
+//     endfunction
+
+//     // connect phase
+//     function void connect_phase(uvm_phase phase);
+//         // necessary connections
+//         drv.seq_item_port.connect(seqr.seq_item_export);
+//     endfunction
+// endclass
 
 /*
 class my_agent extends uvm_agent;

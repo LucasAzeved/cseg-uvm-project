@@ -1,74 +1,46 @@
-class our_monitor extends uvm_monitor;
+import uvm_pkg::*;
+`include "uvm_macros.svh"
 
-    `uvm_component_utils(our_monitor)
+`include "regfile_transaction.svh"
 
-    our_interface intf;
-    our_packet pkt;
-
-    uvm_analysis_port #(our_sequence_item) mon_port;
-
-    function new(string name = "our_monitor", uvm_component parent=null);
+class monitor extends uvm_monitor;
+    `uvm_component_utils(monitor)
+    
+    virtual regfile_if vif;
+    uvm_analysis_port #(regfile_transaction) ap;
+    
+    function new(string name = "monitor", uvm_component parent = null);
         super.new(name, parent);
-    endfunction: new
-
-    // build phase
-    function void build_phase(uvm_phase phase);
-        // build other components
-        pkt = our_packet::type_id::create("Our Packet");
-        // get method
-        uvm_config_db #(virtual our_interface)::get(null, "*", "intf", intf);
-
-        mon_port = new("Monitor Port", this);
     endfunction
-
-    // connect phase
-    function void connect_phase(uvm_phase phase);
-        // necessary connections
+    
+    virtual function void build_phase(uvm_phase phase);
+        super.build_phase(phase);
+        if (!uvm_config_db#(virtual regfile_if)::get(this, "", "vif", vif)) begin
+            `uvm_fatal(get_type_name(), "Failed to get virtual interface from config_db")
+        end
+        ap = new("ap", this);
     endfunction
-
-    // run phase
-    task run_phase(uvm_phase phase);
+    
+    virtual task run_phase(uvm_phase phase);
+        regfile_transaction reg_data;
+        
         forever begin
-            @(posedge intf.clk);
+            @(posedge vif.clk);
+            reg_data = regfile_transaction::type_id::create("reg_data");
             
-            pkt.input_1 <= intf.input_1;
-            pkt.input_2 <= intf.input_2;
+            // Sample inputs
+            reg_data.A1 = vif.monitor_ck.A1;
+            reg_data.A2 = vif.monitor_ck.A2;
+            reg_data.A3 = vif.monitor_ck.A3;
+            reg_data.WD3 = vif.monitor_ck.WD3;
+            reg_data.WE3 = vif.monitor_ck.WE3;
+            
+            // Sample outputs on next cycle for read data
+            @(posedge vif.clk);
+            reg_data.RD1 = vif.monitor_ck.RD1;
+            reg_data.RD2 = vif.monitor_ck.RD2;
+            
+            ap.write(reg_data);
         end
     endtask
-
-endclass : our_monitor
-
-/*
-class my_monitor extends uvm_monitor;
-`uvm_component_utils(my_monitor);
-
-uvm_analysis_port #(my_transaction) aport;
-virtual dut_if dut_vi;
-
-function new(string name, uvm_component parent);
-  super.new(name,parent);
-endfunction: new
-
-function void build_phase(uvm_phase phase);
-  `uvm_info("msg", "Building MONITOR", UVM_NONE)
-  aport = new("aport", this); 
-  if (!uvm_config_db #(virtual dut_if)::get (null,"*", "dut_vi", dut_vi) )
-    `uvm_fatal("my_monitor", "No DUT_IF");  
-  `uvm_info("msg", "MONITOR Done !!!", UVM_NONE)
-endfunction: build_phase
-
-task run_phase(uvm_phase phase);
-  my_transaction tx;
-  forever
-  begin
-    @(posedge dut_vi.clk);
-    tx = my_transaction::type_id::create("tx");
-    $cast(tx.cmd, dut_vi.cmd);
-    tx.data = dut_vi.data;
-    aport.write(tx);
-    //`uvm_info("msg", "New transaction", UVM_HIGH)
-  end
-endtask: run_phase
-
-endclass : my_monitor
-*/
+endclass
