@@ -16,3 +16,6 @@ vlog -sv +incdir+../uvm+../rtl+../include \
     ../uvm/our_sequence.sv \
     ../uvm/test.sv \
     ../uvm/tb_regfile.sv
+
+# Run simulation (optional)
+vsim -c tb_regfile -do "run -all; quit"

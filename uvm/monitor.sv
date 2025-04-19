@@ -24,23 +24,29 @@ class monitor extends uvm_monitor;
     virtual task run_phase(uvm_phase phase);
         regfile_transaction reg_data;
         
+        // Wait for reset to complete
+        @(negedge vif.reset);
+        repeat(2) @(posedge vif.clk); // Stabilization after reset
+        
         forever begin
-            @(posedge vif.clk);
+            // Create new transaction
             reg_data = regfile_transaction::type_id::create("reg_data");
             
-            // Sample inputs
+            // Sample inputs at clock edge
+            @(posedge vif.clk);
             reg_data.A1 = vif.monitor_ck.A1;
             reg_data.A2 = vif.monitor_ck.A2;
             reg_data.A3 = vif.monitor_ck.A3;
             reg_data.WD3 = vif.monitor_ck.WD3;
             reg_data.WE3 = vif.monitor_ck.WE3;
             
-            // Sample outputs on next cycle for read data
-            @(posedge vif.clk);
+            // For RegFile, outputs appear on the SAME clock cycle as inputs
+            // If your DUT needs additional delay cycles, add them here
             reg_data.RD1 = vif.monitor_ck.RD1;
             reg_data.RD2 = vif.monitor_ck.RD2;
             
+            // Send transaction to scoreboard
             ap.write(reg_data);
         end
-    endtask
+    endtask: run_phase
 endclass
